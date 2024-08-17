@@ -12,8 +12,9 @@ def initiate():
 
     car_make_instances = []
     for data in car_make_data:
-        car_make_instances.append(CarMake.objects.create(name=data['name'],
-                                                         description=data['description']))
+        car_make_instances.append(
+            CarMake.objects.create(name=data['name'],
+                                   description=data['description']))
 
     car_model_data = [
       {"name": "Pathfinder", "type": "SUV", "year":  2023,
